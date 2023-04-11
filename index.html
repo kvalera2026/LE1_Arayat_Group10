@@ -169,7 +169,7 @@
 
             .sign-btn {
                 display: inline-block;
-                width: 100%;
+                width: 100px;
                 height: 43px;
                 background-color: #151111;
                 color: #fff;
@@ -180,6 +180,7 @@
                 margin-bottom: 2rem;
                 transition: 0.3s;
             }
+            
 
             .sign-btn:hover {
                 background-color: #8371fd;
@@ -461,14 +462,18 @@
                                 </div>
 
                                 <div class="input-wrap">
-                                    <input type="text" minlength="4" class="input-field" autocomplete="off" required>
-                                    <label>Last Name</label>
-                                </div>
-
-                                <div class="input-wrap">
                                     <input type="email" minlength="4" class="input-field" autocomplete="off" required>
                                     <label>Email</label>
                                 </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                                  </div>
                                 
                                 <input type="submit" value="Sign Up" class="sign-btn"/>
                             </div>
