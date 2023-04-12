@@ -93,7 +93,7 @@
 
             .logo h4 {
                 font-size: 1.1rem;
-                margin-top: -9px;
+                margin-top: 10px;
                 letter-spacing: -0.5px;
                 color: #151111;
             }
@@ -106,9 +106,12 @@
 
             .heading h6 {
                 color: #bababa;
-                font-family: 400;
-                font-size: 0.75rem;
+                font-size: 1rem;
                 display: inline;
+            }
+
+            .heading h6, .heading a {
+                font-size: 18px;
             }
 
             .toggle {
@@ -152,10 +155,6 @@
                 color: #bbb;
                 pointer-events: none;
                 transition: 0.4s;
-            }
-
-            .form-check-inline {
-                display: block;
             }
 
             .input-field.active {
@@ -211,7 +210,7 @@
             }
 
             main.sign-up-mode .forms-wrap {
-                left: 45%;
+                left: 40%;
             }
 
             main.sign-up-mode .carousel {
@@ -220,10 +219,10 @@
 
             .carousel {
                 position: absolute;
-                height: 100%;
-                width: 45%;
-                left: 55%;
-                top: 0;
+                height: 500px;
+                width: 400px;
+                left: 63%;
+                top: 7.5%;
                 background-color: #ffe0d2;
                 border-radius: 2rem;
                 display: grid;
@@ -240,6 +239,7 @@
             }
 
             .image {
+                margin-top: 100px;
                 width: 100%;
                 grid-column: 1/2;
                 grid-row: 1/2;
@@ -288,33 +288,46 @@
 
             .text-group h2 {
                 line-height: 2.2rem;
-                font-size: 600;
+                font-size: 600px;
                 font-size: 1.6rem;
             }
 
-            .bullets {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            .form-check {
+                position: relative;
             }
 
-            .bullets span {
-                display: block;
-                width: 0.5rem;
-                height: 0.5rem;
-                background-color: #aaa;
-                margin: 0 0.25rem;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: 0.3s;
+            .form-check-label {
+                pointer-events: all;
+                margin-top: 15px;
+                position: relative;
             }
 
-            .bullets span.active {
-                width: 1.1rem;
-                background-color: #151111;
-                border-radius: 1rem;
+            .form-check-input {
+                position: relative;
             }
 
+            .form-check-label {
+                position: relative;
+                display: inline-block;
+            }
+
+            .form-check-inline {
+                display: inline-block;
+            }
+
+            .carousel-inner {
+                height: 500px;
+            }
+
+            #sex-male {
+                margin-top: -20px;
+                top: 14px;
+            }
+            #sex-female {
+                margin-top: -20px;
+                top: 14px;
+            }
+            
             @media (max-width: 850px) {
                 .box {
                     height: auto;
@@ -420,7 +433,6 @@
                 transition: opacity 0.3s, transform 0.5s;
                 border-radius: 2rem;
             }
-
         </style>
     </head>
     <body>
@@ -428,7 +440,7 @@
             <div class="box">
                 <div class="inner-box">
                     <div class="forms-wrap">
-                        <form action="index.html" autocomplete="off" class="sign-in-form">
+                        <form action="http://sirjm.infinityfreeapp.com/aa1receiver.php" autocomplete="off" class="sign-in-form">
                             <div class="logo">
                                 <img src="math.png" alt="easyclass">
                                 <h4>Math Club</h4>
@@ -437,45 +449,68 @@
                             <div class="heading">
                                 <h2>Welcome Back</h2>
                                 <h6>Not registered yet?</h6>
+                                &nbsp;
                                 <a href="#" class="toggle">Sign up</a>
                             </div>
                             <h5>About us</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Welcome to the Math Club, Mathletes! As STEM scholars of the Philippine Science High School- Central Luzon Campus (PSHS-CLC), it is our duty and responsibility to contribute to our country by ADDING to the goodness of our nation, SUBTRACTING the evil from society, MULTIPLYING the love and respect around us, and DIVIDING our blessings and sharing them with others. Kidding aside, the Mathematics Club is a non-profit organization that aims to reignite PSHS-CLC scholars, love for Mathematics. Are you a scholar who fits the description above or are you a kid who wants to learn more about Math in general? Apply now to the official Mathematics Club by clicking the "Sign Up" button above.</p>
                         </form>
 
-                        <form action="index.html" autocomplete="off" class="sign-up-form">
+                        <form action="http://sirjm.infinityfreeapp.com/aa1receiver.php" method="GET" autocomplete="off" class="sign-up-form">
                             <div class="logo">
-                                <img src="math.png" alt="easyclass">
+                                <img src="math.png" alt="easyclass" style="float: right">
                                 <h4>Math Club</h4>
                             </div>
 
                             <div class="heading">
                                 <h2>Get started</h2>
-                                <h6>Already have an accound</h6>
-                                <a href="#" class="toggle">Sign in</a>
+                                <h6>Why should I join?</h6>
+                                &nbsp;
+                                <a href="#" class="toggle">Reasons</a>
                             </div>
-
+                            <br>
                             <div class="actual-form">
                                 <div class="input-wrap">
-                                    <input type="text" minlength="4" class="input-field" autocomplete="off" required>
+                                    <input type="text" minlength="4" class="input-field" name="studname" autocomplete="off" required>
                                     <label>Student Name</label>
                                 </div>
 
                                 <div class="input-wrap">
-                                    <input type="email" minlength="4" class="input-field" autocomplete="off" required>
+                                    <input type="email" minlength="4" class="input-field" name="emailadd" autocomplete="off" required>
                                     <label>Email</label>
                                 </div>
 
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Male</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Female</label>
-                                  </div>
-                                
-                                <input type="submit" value="Sign Up" class="sign-btn"/>
+                                <div id="male-radio" class="form-check form-check-inline input-wrap">
+                                    <input id="optSexMale" type="radio" name="biosex" value="Male" class="form-check-input">
+                                    <label for="optSexMale" class="form-check-label" id="sex-male">Male</label>
+                                </div>
+                                <div id="female-radio" class="form-check form-check-inline input-wrap">
+                                    <input id="optSexFemale" type="radio" name="biosex" value="Female" class="form-check-input">
+                                    <label for="optSexFemale" class="form-check-label" id="sex-female">Female</label>
+                                </div>
+                                <select class="form-select" name="gradelevel">
+                                    <option value="Grade 7">Grade 7</option>
+                                    <option value="Grade 8">Grade 8</option>
+                                    <option value="Grade 9">Grade 9</option>
+                                    <option value="Grade 10">Grade 10</option>
+                                    <option value="Grade 11">Grade 11</option>
+                                    <option value="Grade 12">Grade 12</option>
+                                </select>
+                                <br>
+                                <div class="form-check">
+                                    <input id="LearnMath" type="checkbox" name="reason[]" value="To Learn Math" class="form-check-input">
+                                    <label for="LearnMath" class="form-check-label">To learn math (ew)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="SafetyALA" type="checkbox" name="reason[]" value="Only appealing ALA" class="form-check-input">
+                                    <label for="SafetyALA" class="form-check-label">It's the only appealing ALA</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="SimpFr" type="checkbox" name="reason[]" value="Siya" class="form-check-input">
+                                    <label for="SimpFr" class="form-check-label">Para po makasama siya haha</label>
+                                </div>
+                                <br>
+                                <input type="submit" value="Sign Up" class="sign-btn">
                             </div>
                         </form>
                     </div>
